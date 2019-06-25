@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Logo = props => {
+function Logo() {
   return (
     <div className="menu item">Fwitter</div>
   );

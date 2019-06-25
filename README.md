@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Fwitter Working with State Exercise
 
-## Available Scripts
+Welcome to Fwitter, a twitter application from Flatiron Coaches who don't use Twitter much! In this application, you can view tweets from four Twitter users. It's also got a dark mode theme toggle because dark mode is all the rage these days.
 
-In the project directory, you can run:
+Your deliverables:
 
-### `npm start`
+## 1. Toggle dark mode in the Header component
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Our `<Header>` component has a dark mode theme feature that can be enabled by clicking on the toggle. Get that working! 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 2. Toggle dark mode throughout the application
 
-### `npm test`
+It's nice having a theme applied to the nav bar, but what if we want that theme to apply to our whole application? The CSS for this app is already set up. All we need to do to apply a dark mode theme to all of our components is to give our topmost div (in the `<App>` component) a className of "dark-mode":
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+<div id="wrapper" className="dark-mode">
+  ...
+</div>
+```
 
-### `npm run build`
+HINT: You may need to change where state is being set to get this feature to work. 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 3. Click 'View Tweets' on the user card to view the user's tweets 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+In the `<TweetsContainer>` component, we're currently only able to see the tweets for the first user in our user data! Find a way to change which user's tweets are being displayed. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+// Sample user data
+{
+  id: 1,
+  handle: "@coffee_dad",
+  description: "just a dad who loves his coffee",
+  photo: "https://pbs.twimg.com/profile_images/378800000823347939/036f78135425d19367fcbb76ef58e86d_bigger.jpeg",
+  tweets: [
+    {
+      created_at: "Wed Jun 12 13:49:10 +0000 2019",
+      favorite_count: 5782,
+      id: 1138805443562803200,
+      text: "coffee"
+    }
+  ]
+}
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 4. BONUS: Click the Like button to increase likes on a tweet

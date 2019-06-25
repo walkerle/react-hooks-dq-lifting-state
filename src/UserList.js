@@ -4,7 +4,7 @@ import UserCard from './UserCard'
 function UserList(props) {
   return (
     <div className="ui cards">
-      {props.users.map(user => <UserCard key={user.id} handleUserClick={props.handleUserClick} {...user} />)}
+      {props.users.map(user => <UserCard key={user.id} handleUserClick={() => console.log("u clicked the user")} {...user} />)}
     </div>
   )
 }
