@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Header from './Header'
+import TweetsContainer from './TweetsContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    darkMode: false
+  }
+
+  handleToggle = () => this.setState(prevState => ({ darkMode: !prevState.darkMode }))
+
+  render() {
+    return (
+      <div className={this.state.darkMode ? "dark-mode" : ""}>
+        <Header darkMode={this.state.darkMode} handleToggle={this.handleToggle} />
+        <TweetsContainer />
+      </div>
+    )
+  }
 }
-
-export default App;
