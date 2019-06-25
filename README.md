@@ -6,7 +6,7 @@ Your deliverables:
 
 ## 1. Toggle dark mode in the Header component
 
-Our `<Header>` component has a dark mode theme feature that can be enabled by clicking on the toggle. Get that working! 
+Our `<Header>` component has a dark mode theme feature that can be enabled by clicking on the toggle. In order to switch the dark mode theme for the header, you'll need to toggle the `darkMode` key in state from true to false.
 
 ## 2. Toggle dark mode throughout the application
 
@@ -14,11 +14,11 @@ It's nice having a theme applied to the nav bar, but what if we want that theme 
 
 ```jsx
 <div id="wrapper" className="dark-mode">
-  ...
+  // ...
 </div>
 ```
 
-HINT: You may need to change where state is being set to get this feature to work. 
+HINT: You may need to change where the darkMode state is being set to get this feature to work. 
 
 ## 3. Click 'View Tweets' on the user card to view the user's tweets 
 
