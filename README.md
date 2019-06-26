@@ -51,3 +51,7 @@ We're currently only able to see the tweets for one user! Our data is being load
 ```
 
 ## 4. BONUS: Click the Like button to increase likes on a tweet
+
+When you click the Like button under a tweet, it should update the `favorite_count` attribute for that specific tweet. Since each user has an array of tweets associated with them, you'll need to work with updating nested state to get this feature working. 
+
+HINT: Consider using `map` to iterate over the array of tweets. Make sure to only update the tweet object that the user clicked!
