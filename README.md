@@ -2,6 +2,10 @@
 
 Welcome to Fwitter, a twitter application from Flatiron Coaches who don't use Twitter much! In this application, you can view tweets from four Twitter users. It's also got a dark mode theme toggle because dark mode is all the rage these days.
 
+Here's what the full working app should look like:
+
+![](fwitter-demo.gif)
+
 Your deliverables:
 
 ## 1. Toggle dark mode in the Header component
