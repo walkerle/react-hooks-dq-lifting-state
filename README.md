@@ -6,6 +6,8 @@ Here's what the full working app should look like:
 
 ![](fwitter-demo.gif)
 
+Before starting work on the deliverables below, you might find it helpful to draw out the component tree. Think about where state is currently defined in our app, and if you'll need to move it to another component to get the deliverables working. You might also need to change some functional components into class-based components and vice versa.
+
 Your deliverables:
 
 ## 1. Toggle dark mode in the Header component
@@ -14,12 +16,12 @@ Our `<Header>` component has a dark mode theme feature that can be enabled by cl
 
 ## 2. Toggle dark mode throughout the application
 
-It's nice having a theme applied to the nav bar, but what if we want that theme to apply to our whole application? The CSS for this app is already set up. All we need to do to apply a dark mode theme to all of our components is to give our topmost div (in the `<App>` component) a className of "dark-mode":
+It's nice having a theme applied to the nav bar, but what if we want that theme to apply to our whole application? The CSS for this app is already set up. All we need to do to apply a dark mode theme to all of our components is change the `darkMode` prop being passed down to our `<DarkModeWrapper>` in `<App>` to true:
 
 ```jsx
-<div id="wrapper" className="dark-mode">
+<DarkModeWrapper darkMode={true}>
   // ...
-</div>
+</DarkModeWrapper>
 ```
 
 HINT: You may need to change where the darkMode state is being set to get this feature to work. 

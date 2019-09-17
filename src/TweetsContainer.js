@@ -3,7 +3,7 @@ import TweetList from './TweetList'
 import UserList from './UserList'
 import { users } from './data/data'
 
-export default class TweetsContainer extends Component {
+class TweetsContainer extends Component {
   state = {
     users: users
   }
@@ -26,3 +26,5 @@ export default class TweetsContainer extends Component {
     )
   }
 }
+
+export default TweetsContainer

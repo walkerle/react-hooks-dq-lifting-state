@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Logo from './Logo'
 import Menu from './Menu'
 
-export default class Header extends Component {
+class Header extends Component {
   state = {
     darkMode: false
   }
@@ -18,3 +18,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default Header

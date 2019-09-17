@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import DarkModeWrapper from './DarkModeWrapper'
 import Header from './Header'
 import TweetsContainer from './TweetsContainer'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div id="wrapper" className={""/* dark-mode */}>
-        <Header />
-        <TweetsContainer />
-      </div>
-    )
-  }
+function App() {
+  return (
+    <DarkModeWrapper darkMode={false}>
+      <Header />
+      <TweetsContainer />
+    </DarkModeWrapper>
+  )
 }
+
+export default App
