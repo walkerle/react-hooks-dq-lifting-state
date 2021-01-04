@@ -6,7 +6,7 @@ these days.
 
 Here's what the full working app should look like:
 
-![demo](fwitter-demo.gif)
+![demo](https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-dq-lifting-state/master/fwitter-demo.gif)
 
 Before starting work on the deliverables below, you might find it helpful to
 draw out the component tree. Think about where state is currently defined in our
